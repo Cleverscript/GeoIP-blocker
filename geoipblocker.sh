@@ -73,7 +73,7 @@ if [ -f `which geoiplookup` ]; then
                         ;;
                     esac
 
-                    #echo $remoteaddr $countreq $countrycode
+                    echo $remoteaddr $countreq $countrycode
 
                 fi
             fi
