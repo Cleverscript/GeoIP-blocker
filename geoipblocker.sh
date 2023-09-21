@@ -68,8 +68,9 @@ if [ -f `which geoiplookup` ]; then
 
                             if [ $? -ne 0 ]; then
                                 echo "deny ${remoteaddr};" >> $NGINXCONFFILE
+                                echo "[$(date +"%d.%m.%y %H:%M:%S")] IP ${remoteaddr} blocked!" >> $LOGFILE
                             else
-                                echo "[$(date +"%d.%m.%y %H:%M:%S")] IP ${remoteaddr} already exist in ${NGINXCONFFILE}" >> $LOGFILE
+                                echo "[$(date +"%d.%m.%y %H:%M:%S")] IP ${remoteaddr} already blocked before." >> $LOGFILE
                             fi
                         ;;
                     esac
