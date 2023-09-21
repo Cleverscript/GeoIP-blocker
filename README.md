@@ -21,10 +21,10 @@ $ cp geoipblocker.sh /usr/bin
 2. Add execution rights to the script
 $ chmod +x /usr/bin/geoipblocker.sh
 
-Test the script with default settings
+3.Test the script with default settings
 $ sudo /usr/bin/geoipblocker.sh
 
-Сonfigure the script
+4. Сonfigure the script
 Change the paths to create the configuration file, depending on your system
 Default custom config path NGINX => /etc/nginx/conf.d/
 If your use VMBitrix, then custom config path NGINX => /etc/nginx/bx/settings/
@@ -33,9 +33,9 @@ and the request limit after which they will be blocked
 ACCESCOUNTREQ=1000
 ALLOWCOUNTRY=RU,BY,KZ
 
-Add a task to the scheduler СRON for the user root
+5. Add a task to the scheduler СRON for the user root
 $ crontab -e
 */1 * * * * /usr/bin/geoipblocker.sh &>/dev/null
 
-After a minute, check if the configuration file appears in NGINX and the entries in it
+6. After a minute, check if the configuration file appears in NGINX and the entries in it
 $ tail -f /etc/nginx/bx/settings/geoipblocker_deny_ip.conf
