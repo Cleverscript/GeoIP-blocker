@@ -15,6 +15,7 @@
 # 1) EXPORT - only exports results in JSON format to a file
 # 3) BLOCKED - blocks unwanted IPs via NGINX configuration file
 #
+# Default custom config path NGINX => /etc/nginx/conf.d/
 # If your use VMBitrix, then custom config path NGINX => /etc/nginx/bx/settings/
 
 # set -x
