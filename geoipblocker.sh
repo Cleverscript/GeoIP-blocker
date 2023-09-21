@@ -67,10 +67,9 @@ if [ -f `which geoiplookup` ]; then
                             grep -w "deny ${remoteaddr};" $NGINXCONFFILE >/dev/null
 
                             if [ $? -ne 0 ]; then
-                                echo $? $remoteaddr
                                 echo "deny ${remoteaddr};" >> $NGINXCONFFILE
                             else
-                                echo "[$(date +"%d.%m.%y %H:%M:%S")] IP already exist in ${NGINXCONFFILE}" >> $LOGFILE
+                                echo "[$(date +"%d.%m.%y %H:%M:%S")] IP ${remoteaddr} already exist in ${NGINXCONFFILE}" >> $LOGFILE
                             fi
                         ;;
                     esac
