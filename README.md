@@ -1,6 +1,6 @@
-# GeoIp blocker shell
+# GeoIp blocker
 
-The script sorts IPs by the number of requests and checks the country by GeoIP 
+GeoIp blocker shell - the script sorts IPs by the number of requests and checks the country by GeoIP 
 if the limit of requests from this IP >= the specified value, 
 and the country is not included in the list of allowed ones, 
 then a configuration file will be created, in which such IPs  
