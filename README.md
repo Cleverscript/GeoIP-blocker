@@ -21,7 +21,7 @@ $ cp geoipblocker.sh /usr/bin
 2. Add execution rights to the script
 $ chmod +x /usr/bin/geoipblocker.sh
 
-3.Test the script with default settings
+3. Test the script with default settings
 $ sudo /usr/bin/geoipblocker.sh
 
 4. Сonfigure the script
