@@ -4,7 +4,8 @@ GeoIp blocker shell - the script sorts IPs by the number of requests and checks 
 if the limit of requests from this IP >= the specified value, 
 and the country is not included in the list of allowed ones, 
 then a configuration file will be created, in which such IPs  
-will be entered and connections with the NGINX server will be prohibited for them
+will be entered and connections with the NGINX server will be prohibited for them.
+This can help you in repelling L7 type DDOS attacks (SlowLoris, HTTP flood)
 
 ## Operating modes:
 1. DEBUG - only shows results in the console, without blocking (default)
